@@ -1,18 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Typography, Button, Box } from "@material-ui/core";
+import { Button, Box } from "@material-ui/core";
 
 const FullWidthButton = ({ color, callbackFunc, children }) => {
     return (
         <>
             <Box mt={2}>
-                <Button
-                    fullWidth
-                    variant="contained"
-                    color={color}
-                    onClick={() => callbackFunc()}
-                >
-                    <Typography variant="button">{children}</Typography>
+                <Button fullWidth color={color} onClick={() => callbackFunc()}>
+                    {children}
                 </Button>
             </Box>
         </>

@@ -6,7 +6,6 @@ import {
     ListItemSecondaryAction,
     ListItemText,
     ListItemAvatar,
-    Typography,
     Button,
 } from "@material-ui/core";
 
@@ -25,14 +24,8 @@ const BirthdayListItem = ({
             </ListItemAvatar>
             <ListItemText primary={name} secondary={`${age}  years old`} />
             <ListItemSecondaryAction>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => clearPeopleListByID(id)}
-                >
-                    <Typography variant="button">
-                        {gender === "male" ? "Wish Him!" : "Wish Her!"}
-                    </Typography>
+                <Button color="primary" onClick={() => clearPeopleListByID(id)}>
+                    {"Wish " + (gender === "male" ? "Him" : "Her") + "!"}
                 </Button>
             </ListItemSecondaryAction>
         </ListItem>
