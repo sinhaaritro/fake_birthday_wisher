@@ -21,7 +21,7 @@ const BirthdayListItem = ({
     return (
         <ListItem>
             <ListItemAvatar>
-                <Avatar>{/* <FolderIcon /> */}</Avatar>
+                <Avatar alt={name} src={image} />
             </ListItemAvatar>
             <ListItemText primary={name} secondary={`${age}  years old`} />
             <ListItemSecondaryAction>

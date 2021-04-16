@@ -5,7 +5,7 @@ import { Typography, Button, Box } from "@material-ui/core";
 const FullWidthButton = ({ color, callbackFunc, children }) => {
     return (
         <>
-            <Box my={2}>
+            <Box mt={2}>
                 <Button
                     fullWidth
                     variant="contained"
