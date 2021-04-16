@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Box } from "@material-ui/core";
 import CardContainer from "./Components/CardContainer";
+import { deepPurple } from "@material-ui/core/colors";
 
 function App() {
     return (
@@ -10,7 +11,7 @@ function App() {
                 alignItems="center"
                 justifyContent="center"
                 minHeight="100vh"
-                style={{ backgroundColor: "#cfe8fc" }}
+                style={{ backgroundColor: deepPurple[50] }}
             >
                 <Container fixed maxWidth="sm">
                     <CardContainer />
