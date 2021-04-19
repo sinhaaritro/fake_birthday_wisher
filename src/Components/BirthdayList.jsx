@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { List, Typography } from "@material-ui/core";
+import { Grid, Button, List, Typography } from "@material-ui/core";
 import BirthdayListItem from "./BirthdayListItem";
 import FullWidthButton from "./FullWidthButton";
 
@@ -64,7 +64,27 @@ const BirthdayList = () => {
                     Loading...
                 </Typography>
             )}
-            <FullWidthButton
+            <Grid container spacing={2} direction="column">
+                <Grid item>
+                    <Button
+                        fullWidth
+                        color="primary"
+                        onClick={getFakePeopleBirthday}
+                    >
+                        Get More People to Wish
+                    </Button>
+                </Grid>
+                <Grid item>
+                    <Button
+                        fullWidth
+                        color="secondary"
+                        onClick={clearPeopleList}
+                    >
+                        Clear All
+                    </Button>
+                </Grid>
+            </Grid>
+            {/* <FullWidthButton
                 color="primary"
                 callbackFunc={getFakePeopleBirthday}
             >
@@ -72,7 +92,7 @@ const BirthdayList = () => {
             </FullWidthButton>
             <FullWidthButton color="secondary" callbackFunc={clearPeopleList}>
                 Clear All
-            </FullWidthButton>
+            </FullWidthButton> */}
         </>
     );
 };
